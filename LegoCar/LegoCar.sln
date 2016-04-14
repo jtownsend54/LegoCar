@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegoCar", "LegoCar\LegoCar.csproj", "{C11CF17A-3B72-4F3E-BF0F-F0186BB97D88}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C11CF17A-3B72-4F3E-BF0F-F0186BB97D88}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{C11CF17A-3B72-4F3E-BF0F-F0186BB97D88}.Debug|iPhone.Build.0 = Debug|iPhone
+		{C11CF17A-3B72-4F3E-BF0F-F0186BB97D88}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{C11CF17A-3B72-4F3E-BF0F-F0186BB97D88}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{C11CF17A-3B72-4F3E-BF0F-F0186BB97D88}.Release|iPhone.ActiveCfg = Release|iPhone
+		{C11CF17A-3B72-4F3E-BF0F-F0186BB97D88}.Release|iPhone.Build.0 = Release|iPhone
+		{C11CF17A-3B72-4F3E-BF0F-F0186BB97D88}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{C11CF17A-3B72-4F3E-BF0F-F0186BB97D88}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+EndGlobal
