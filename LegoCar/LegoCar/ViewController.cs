@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Net;
+using System.Text;
+using System.IO;
 using UIKit;
+using Newtonsoft.Json;
 
 namespace LegoCar
 {
@@ -24,16 +27,27 @@ namespace LegoCar
 
 		partial void BtnForward_TouchUpInside (UIButton sender)
 		{
-			var request = HttpWebRequest.Create("192.168.42.1");
+			var request 		= HttpWebRequest.Create("http://192.168.42.1");
 			request.ContentType = "application/json";
-			request.Method = "POST";
+			request.Method 		= "POST";
+
+			String data = "{'action':'forward'}";
+
+			byte[] dataArray = Encoding.UTF8.GetBytes(data);
+
+			Stream dataStream = request.GetRequestStream();
+			dataStream.Write(dataArray, 0, dataArray.Length);
+			dataStream.Close();
+
+			WebResponse response = request.GetResponse();
+
 
 			// Used to send an Authorization header?
 			// httpWebRequest.Credentials = new NetworkCredential (Token, "");
 
-			//var alert = UIAlertController.Create ("Moving", "Forward", UIAlertControllerStyle.Alert);
-			//alert.AddAction (UIAlertAction.Create ("Ok", UIAlertActionStyle.Default, null));
-			//PresentViewController (alert, true, null);
+			var alert = UIAlertController.Create ("Moving", ((HttpWebResponse)response).StatusCode.ToString(), UIAlertControllerStyle.Alert);
+			alert.AddAction (UIAlertAction.Create ("Ok", UIAlertActionStyle.Default, null));
+			PresentViewController (alert, true, null);
 		}
 	}
 }
